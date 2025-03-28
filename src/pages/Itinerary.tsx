@@ -9,6 +9,7 @@ import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import { Calendar, Clock, DollarSign, MapPin, Plus, Trash } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { toast } from "sonner";
+import { v4 as uuidv4 } from 'uuid';
 
 // Mock activities data
 const mockActivities = [
@@ -68,14 +69,6 @@ const mockActivities = [
     rating: 4.9,
   },
 ];
-
-// Add missing import
-import { v4 as uuidv4 } from 'uuid';
-
-// Dummy implementation of uuidv4 since we don't have the actual dependency
-function uuidv4() {
-  return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-}
 
 const Itinerary = () => {
   const { trip, setTrip } = useTrip();
