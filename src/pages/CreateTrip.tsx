@@ -22,12 +22,12 @@ const destinations = [
   { id: "nyc", name: "New York City, USA", image: "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?auto=format&fit=crop&q=80" },
   { id: "rome", name: "Rome, Italy", image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&q=80" },
   { id: "bali", name: "Bali, Indonesia", image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80" },
-  { id: "barcelona", name: "Barcelona, Spain", image: "https://images.unsplash.com/photo-1560979710-ccfb1627c4d8?auto=format&fit=crop&q=80" },
+  { id: "barcelona", name: "Barcelona, Spain", image: "https://images.unsplash.com/photo-1560979710-ccfb4627c4d8?auto=format&fit=crop&q=80" },
 ];
 
 const CreateTrip = () => {
   const navigate = useNavigate();
-  const { setTrip, budget, selectedPreferences } = useTrip();
+  const { setTrip, budget, selectedPreferences, preferences } = useTrip();
   
   const [tripName, setTripName] = useState("");
   const [destination, setDestination] = useState("");
