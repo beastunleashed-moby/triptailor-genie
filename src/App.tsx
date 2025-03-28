@@ -14,6 +14,8 @@ import Itinerary from "./pages/Itinerary";
 import Activities from "./pages/Activities";
 import Budget from "./pages/Budget";
 import Layout from "./components/Layout";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +29,8 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/preferences" element={<Preferences />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
             <Route element={<Layout />}>
               <Route path="/create-trip" element={<CreateTrip />} />
               <Route path="/itinerary" element={<Itinerary />} />

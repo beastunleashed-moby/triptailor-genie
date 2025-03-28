@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Calendar, MapPin, PieChart, LogIn, UserPlus } from "lucide-react";
 
 const Index = () => {
   const [isAnimated, setIsAnimated] = useState(false);
@@ -19,6 +19,20 @@ const Index = () => {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <span className="text-xl font-bold text-travel-primary">TripTailor</span>
+            </div>
+            <div className="flex items-center space-x-4">
+              <Link to="/login">
+                <Button variant="ghost" className="text-gray-600 hover:text-travel-primary">
+                  <LogIn className="h-4 w-4 mr-2" />
+                  Login
+                </Button>
+              </Link>
+              <Link to="/signup">
+                <Button className="bg-travel-primary hover:bg-blue-600 text-white">
+                  <UserPlus className="h-4 w-4 mr-2" />
+                  Sign Up
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -148,6 +162,3 @@ const Index = () => {
 };
 
 export default Index;
-
-// Add missing imports
-import { Calendar, MapPin, PieChart } from "lucide-react";
